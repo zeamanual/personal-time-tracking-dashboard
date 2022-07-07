@@ -11,7 +11,10 @@ function Main() {
         <PersonalInfoCard></PersonalInfoCard> 
     </div>
    
-        <ActivityCard className='activity'></ActivityCard>
+      
+        <div className='activity'>
+        <ActivityCard></ActivityCard>
+        </div>
         <div className='activity'>
         <ActivityCard></ActivityCard>
         </div>

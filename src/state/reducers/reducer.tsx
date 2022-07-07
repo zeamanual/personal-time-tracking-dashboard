@@ -24,6 +24,8 @@ let reducer = (state:State=initialState,action:Action)=>{
             return state  
         case constants.CHANGE_TIME:
             return state   
+        default:
+            return state
     }
 }
 
