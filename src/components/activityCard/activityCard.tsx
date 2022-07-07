@@ -1,9 +1,23 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import './activityCard.css'
 let workImage = require('../../assets/images/icon-work.svg')
-function ActivityCard() {
-    let {type,current,previous,time}={type:'Work',current:32, previous:36,time:'daily'}
+
+type Props = {
+    type:string,
+    current:number,
+    previous:number,
+    time:string
+}
+
+
+let ActivityCard:React.FC<Props>= (props)=> {
+    let state = useSelector(state=>state)
+    let dispatch = useDispatch()
+    // let {type,current,previous,time}={type:'Work',current:32, previous:36,time:'daily'}
+    let {type,current,previous,time}=props
     let keyword:string=''
+
     if(time=='daily'){
         keyword='Yseterday'
     }else if(time =='weekly'){

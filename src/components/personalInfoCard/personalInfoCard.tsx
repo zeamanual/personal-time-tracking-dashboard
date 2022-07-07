@@ -1,7 +1,16 @@
 import React from 'react'
+import { useSelector,useDispatch } from 'react-redux'
+import ActionCreator from '../../state/actions/actionGenerators'
 import './personalInfoCard.css'
 let userImg = require("../../assets/images/image-jeremy.png")
 function PersonalInfoCard() {
+  let state = useSelector(state=>state)
+  let dispatch = useDispatch()
+
+  let timeSelectHandler=(time:string)=>{
+    dispatch(ActionCreator.changeTime(time))
+  }
+
   return (
     <div className='personal-info-container'>
       <div className='personal-info'>
@@ -15,9 +24,15 @@ function PersonalInfoCard() {
 
       </div>
       <div className='time-container'>
-        <p className='time'>Daily</p>
-        <p className='time'>Weekly</p>
-        <p className='time'>Monthly</p>
+        <p className='time' onClick={()=>{
+            timeSelectHandler('daily')
+        }}>Daily</p>
+        <p className='time' onClick={()=>{
+            timeSelectHandler('weekly')
+        }}>Weekly</p>
+        <p className='time' onClick={()=>{
+            timeSelectHandler('monthly')
+        }}>Monthly</p>
 
       </div>
     </div>

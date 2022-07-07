@@ -2,28 +2,37 @@ import constants from '../constants'
 
 
 type State = {
-    selected:string
-}
-
-type Action = {
-    type:string,
-    payload?:string
+    activities:any[],
+    selectedTime:string,
+    isLoading:boolean,
+    errorOccured:boolean,
 }
 
 let initialState = {
     activities:[],
-    selected:'',
+    selectedTime:'daily',
     isLoading:false,
     errorOccured:false,
-    errorMessage:''
 }
 
-let reducer = (state:State=initialState,action:Action)=>{
+let reducer = (state:State=initialState,action:any)=>{
     switch(action.type){
-        case constants.LOAD_DATA:
-            return state  
+        case constants.LOADING_DATA:
+            return {
+                ...state,isLoading:true
+            }  
         case constants.CHANGE_TIME:
-            return state   
+            return {
+                ...state,selectedTime:action.payload || 'daily'
+            }
+        case constants.DATA_LOADED:
+            return {
+                ...state,activities:action.payload,isLoading:false
+            }
+        case constants.LOADING_FAILDED:
+            return {
+                ...state, errorOccured:true
+            }
         default:
             return state
     }
