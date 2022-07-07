@@ -51,25 +51,6 @@ if(state.errorOccured){
 
             })
         }
-        <div className='activity'>
-        <ActivityCard ></ActivityCard>
-        </div>
-        <div className='activity'>
-        <ActivityCard></ActivityCard>
-        </div>
-        <div className='activity'>
-        <ActivityCard></ActivityCard>
-        </div>
-        <div className='activity'>
-        <ActivityCard></ActivityCard>
-        </div>
-        <div className='activity'>
-        <ActivityCard></ActivityCard>
-        </div>
-        <div className='activity'>
-        <ActivityCard></ActivityCard>
-        </div>
-
     </div>
   
     </div>

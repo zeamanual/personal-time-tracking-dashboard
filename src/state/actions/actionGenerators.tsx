@@ -7,7 +7,7 @@ let loadData = (url:URL)=>{
     
     return (dispatch:any)=>{
         dispatch({type: constants.LOADING_DATA})
-        console.log('data fetch started ')
+       
 
 
         fetch('https://wookie.codesubmit.io/time-tracking', {
@@ -17,10 +17,10 @@ let loadData = (url:URL)=>{
           }).then( (res)=> {
             return res.json()
         }).then(data=>{
-            console.log('feteched data',data)
+
             dispatch({type: constants.DATA_LOADED,payload:data})
         }).catch(error=>{
-            console.log('errorr has occured occured',error)
+           
             dispatch({type:constants.LOADING_FAILDED,payload:{errorOccured:true}})
         });
     }
