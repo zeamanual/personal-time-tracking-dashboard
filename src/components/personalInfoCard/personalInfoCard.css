@@ -8,14 +8,13 @@
     grid-template-rows:3fr 2fr ;
     background-color: hsl(235, 46%, 20%);
     border-radius: 0.5em;
+    margin-bottom: 1em;
 }
 
 .personal-info .img-container{
-    /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: center;
-        
+    justify-content: center;       
 }
 .personal-info img{
     width:50%
@@ -37,8 +36,12 @@
     color:hsl(195, 74%, 62%);
     margin:1em 0;
 }
-.personal-info{
-
+.time-container .time{
+    cursor: pointer;
+    padding-bottom:0.5em;
+}
+.time:hover{
+    color: white;
 }
 .active{
     color:white;
@@ -56,9 +59,8 @@
         grid-template-columns: 30% 50%;
         justify-content: center;
     }
-    .personal-info .name-container{
-
-
+    .personal-info-container{
+        width:100%;
     }
     .time-container{
         display: flex;
@@ -67,5 +69,22 @@
     }
 }
 @media screen and (min-width:760px) {
+    .personal-info .img-container{
+        max-width: 150px;
+        margin-bottom:1em ;
+    }
+    .time-container{
+        padding:1em;
+    }
+    .name-container .name{
+        font-size: 2em;
+    }
+    .personal-info-container{
+        max-width: 200px;
+    }
+    .personal-info{
+        padding: 1em 1em;
+    }
+
 
 }

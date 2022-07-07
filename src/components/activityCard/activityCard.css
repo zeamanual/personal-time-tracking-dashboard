@@ -1,0 +1,58 @@
+
+.activity-outer-card{
+    position: relative;
+    top:-1em;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 0.5em;
+    padding: 1em;
+ 
+}
+.activity-outer-card:hover{
+    background-color: hsl(235, 45%, 34%);
+}
+.activity-inner-card{
+    background-color:rgb(245, 149, 40) ;
+    height: 4em;
+    border-radius: 0.5em;
+    background-image: url('../../assets/images/icon-work.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.activity-outer-card .first-row{
+    padding: 1em 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.first-row .dots{
+    font-weight: 800;
+    font-size: 1.2em;
+}
+.activity-outer-card .second-row{
+    color:hsl(0, 0%, 63%)
+}
+.activity-outer-card .current{
+    color:white;
+    font-size: 2em;
+    padding-bottom: 0.2em;
+}
+
+
+@media screen and (max-width:700px) {
+    .activity-card-container{
+        width: 100%;
+    }
+    .activity-outer-card .second-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:701px) {
+    .activity-card-container{
+        max-width: 200px;
+    }
+}

@@ -1,0 +1,30 @@
+.main-page{
+
+}
+/* .main-page .activites{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+@media screen and (max-width:700px) {
+    .main-page .activites{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-page{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width:701px) {
+    .main-page{
+        padding: 4em;
+        display: grid;
+        background-color: rgb(2, 10, 51);
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+    .main-page .first-column{
+        grid-row: span 2;
+    }
+    
+}
