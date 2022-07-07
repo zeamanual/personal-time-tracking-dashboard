@@ -26,7 +26,6 @@ let reducer = (state:State=initialState,action:any)=>{
                 ...state,selectedTime:action.payload || 'daily'
             }
         case constants.DATA_LOADED:
-            
             return {
                 ...state,activities:action.payload,isLoading:false
             }
